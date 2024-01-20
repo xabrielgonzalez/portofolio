@@ -1,0 +1,36 @@
+---
+import Card from "./Card/index.astro";
+import { Icon } from "astro-icon/components";
+import { LINKS } from "../lib/constants";
+---
+
+<Card
+colSpan="md:col-span-1"
+rowSpan="md:row-span-2"
+colbg="md:bg-[#EB493B] sm:bg-[#EB493B] max-sm:bg-[#EB493B] max-md:bg-[#EB493B]"
+>
+
+<a href={LINKS.mail} target="_blank">
+  <Icon name="ri:mail-line" class="h-24 w-55 max-sm:w-74" />
+</a>
+  
+
+  
+</Card>
+
+<Card
+colSpan="md:col-span-1"
+rowSpan="md:row-span-2 "
+colbg="max-md:bg-[#043f2b] max-sm:bg-[#043f2b] md:bg-[#043f2b]"
+
+>
+
+<a href={LINKS.github} aria-label="github profile" target="_blank">
+
+  <Icon name="ri:github-fill" class="h-24 w-55 max-sm:w-73"  />
+</a>
+
+
+
+  
+</Card>

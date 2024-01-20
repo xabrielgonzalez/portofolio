@@ -1,0 +1,41 @@
+---
+import Card from "./Card/index.astro";
+import Button from "./Button.astro";
+import { Icon } from "astro-icon/components";
+import Tooltip from "./Tooltip/index";
+---
+
+<Card
+  colSpan="md:col-span-3"
+  rowSpan="md:row-span-4"
+  colbg="md:backdrop-blur-sm bg-purple-800 "
+>
+  <div class="flex w-full h-full">
+    <div class="flex flex-col justify-between md:max-h-[300px] gap-4">
+      <div class="flex flex-col h-full">
+        <p class="m-0 pt-8 font-light text-xl">
+          Hi, I'm <b>Xabriel Gonzalez</b>, a <b>Frontend</b> web developer. Currently, I am
+          immersed in the study and mastery of various technologies in both
+         <b>Frontend</b> and <b>Backend</b>, with the goal of becoming a fullstack developer.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <Tooltip client:visible>
+          <Button aria-label="easter egg btn">
+            <Icon name="ri:emotion-laugh-line" class="h-6" />
+            <span class="sr-only">Easter egg button</span>
+          </Button>
+        </Tooltip>
+      </div>
+    </div>
+    <img
+      width="1012"
+      height="512"
+      src="/me.webp"
+      class="w-auto max-h-[300px] select-none absolute right-[-110px] bottom-[-20px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
+      alt="memoji of gianmarco"
+    />
+  </div>
+</Card>
+
+<style></style>
